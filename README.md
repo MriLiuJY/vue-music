@@ -17,5 +17,7 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+# Vue2.0制作的云音乐webApp
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用Vue-router,Vuex,axios
+## 项目严格基于面向对象编程的思维,大量封装了使用频次较多的事件处理代码
