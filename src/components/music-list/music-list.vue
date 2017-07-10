@@ -3,15 +3,35 @@
   	<div class="back">
   	  <i class="icon-back"></i>
   	</div>
-  	<h1 class="title"></h1>
-  	<div class="bg-image">
+  	<h1 class="title" v-html="title"></h1>
+  	<div class="bg-image" :style="bgStyle">
   	  <div class="filter"></div>
   	</div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+    props: {
+      bgImage: {
+        type: String,
+        default: ''
+      },
+      songs: {
+        type: Array,
+        default: []
+      },
+      title: {
+        type: String,
+        default: ''
+      }
+    },
+    computed: {
+      bgStyle() {
+        return `background-image:url(${this.bgImage})`
+      }
+    }
+  }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
