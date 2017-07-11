@@ -7,10 +7,18 @@
   	<div class="bg-image" :style="bgStyle">
   	  <div class="filter"></div>
   	</div>
+    <scroll :data="songs" class="list">
+      <div class="song-list-wrapper">
+        <song-list :songs="songs"></song-list>
+      </div>
+    </scroll>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  import Scroll from 'base/scroll/scroll'
+  import SongList from 'base/song-list/song-list'
+
   export default {
     props: {
       bgImage: {
@@ -30,6 +38,10 @@
       bgStyle() {
         return `background-image:url(${this.bgImage})`
       }
+    },
+    components: {
+      Scroll,
+      SongList
     }
   }
 </script>
